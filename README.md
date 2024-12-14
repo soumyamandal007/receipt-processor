@@ -10,7 +10,7 @@
 
 1. **Clone the Repository**
    ```bash
-   git clone <your-repository-url>
+   git clone <github-url>
    cd receipt-processor
    ```
 
@@ -39,20 +39,25 @@
 ### Example Request Body
 ```json
 {
-  "retailer": "Target",
-  "purchaseDate": "2022-01-01",
-  "purchaseTime": "13:01",
+  "retailer": "M&M Corner Market",
+  "purchaseDate": "2022-03-20",
+  "purchaseTime": "14:33",
   "items": [
     {
-      "shortDescription": "Mountain Dew 12PK",
-      "price": "6.49"
-    },
-    {
-      "shortDescription": "Emils Salsa",
-      "price": "2.99"
+      "shortDescription": "Gatorade",
+      "price": "2.25"
+    },{
+      "shortDescription": "Gatorade",
+      "price": "2.25"
+    },{
+      "shortDescription": "Gatorade",
+      "price": "2.25"
+    },{
+      "shortDescription": "Gatorade",
+      "price": "2.25"
     }
   ],
-  "total": "9.48"
+  "total": "9.00"
 }
 ```
 
@@ -66,13 +71,6 @@
 5. Set request body to the example JSON above
 6. Send the request
 
-### Scoring Points
-The application calculates points based on various receipt characteristics:
-- Alphanumeric characters in retailer name
-- Round dollar amounts
-- Specific time of purchase
-- Number of items
-- Item description length
 
 ### Troubleshooting
 - Ensure Docker is running
@@ -88,5 +86,3 @@ python3 -m pip install flask
 python3 app.py
 ```
 
-### Contributing
-Please read the contributing guidelines before making any changes.
